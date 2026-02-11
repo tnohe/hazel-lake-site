@@ -1,682 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hazel Lake Partners | Private Investment Firm</title>
-  <meta name="description" content="Hazel Lake Partners invests to build and operate great businesses. A disciplined approach to acquiring and growing enduring companies.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hazel Lake Partners</title>
+  <meta name="description" content="Hazel Lake Partners invests to build and operate great businesses." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --navy: #1a2332;
-      --slate: #374151;
-      --steel: #64748b;
-      --silver: #94a3b8;
-      --pearl: #f1f5f9;
-      --ivory: #fafbfc;
-      --white: #ffffff;
-      --gold: #b8956b;
-      --gold-light: #d4b896;
-      --border: rgba(26, 35, 50, 0.08);
-      --border-dark: rgba(26, 35, 50, 0.12);
-      --max-width: 1200px;
-      --content-width: 800px;
+    :root{
+      --navy:#1a2332;
+      --slate:#334155;
+      --muted:#64748b;
+      --line:rgba(26,35,50,.10);
+      --bg:#ffffff;
+      --max:1040px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+      background:var(--bg);
+      color:var(--slate);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.55;
+    }
+
+    /* Above-the-fold layout */
+    .shell{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:32px 24px;
+    }
+
+    .card{
+      width:min(var(--max), 100%);
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+      min-width:0;
+    }
+
+    .brand img{
+      width:34px;
+      height:34px;
+      object-fit:contain;
+    }
+
+    .brand span{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:1.25rem;
+      font-weight:500;
+      color:var(--navy);
+      letter-spacing:-.01em;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .link{
+      font-size:.9rem;
+      color:var(--slate);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:8px;
+      transition:background .15s ease, color .15s ease;
+    }
+    .link:hover{background:rgba(26,35,50,.04); color:var(--navy);}
+
+    .cta{
+      font-size:.9rem;
+      font-weight:500;
+      color:var(--navy);
+      text-decoration:none;
+      padding:8px 12px;
+      border:1px solid var(--navy);
+      border-radius:10px;
+      transition:background .15s ease, color .15s ease;
+    }
+    .cta:hover{background:var(--navy); color:#fff;}
+
+    main{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    h1{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:clamp(2.05rem, 3.4vw, 2.6rem);
+      font-weight:400;
+      line-height:1.18;
+      color:var(--navy);
+      letter-spacing:-.015em;
+      margin-bottom:10px;
+    }
+
+    .tagline{
+      color:var(--muted);
+      font-size:1.02rem;
+      font-weight:300;
+      margin-bottom:14px;
+      max-width:42ch;
+    }
+
+    .bullets{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      padding-top:10px;
+      border-top:1px solid var(--line);
+    }
+
+    .pill{
+      font-size:.9rem;
+      color:var(--slate);
+      background:rgba(26,35,50,.03);
+      border:1px solid rgba(26,35,50,.06);
+      padding:8px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .pill strong{color:var(--navy); font-weight:600;}
+
+    aside{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+    }
+
+    .aside-title{
+      font-size:.78rem;
+      font-weight:600;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+
+    .meta{
+      display:grid;
+      gap:10px;
+    }
+
+    .row{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      padding-bottom:10px;
+      border-bottom:1px solid rgba(26,35,50,.08);
+    }
+    .row:last-child{border-bottom:none; padding-bottom:0;}
+    .k{font-size:.92rem; color:var(--muted);}
+    .v{font-size:.92rem; color:var(--navy); font-weight:500; text-align:right;}
+
+    footer{
+      margin-top:18px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:rgba(26,35,50,.55);
+      font-size:.82rem;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--white);
-      color: var(--slate);
-      line-height: 1.7;
-      font-size: 16px;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Header & Navigation */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      transition: box-shadow 0.3s ease;
-    }
-
-    header.scrolled {
-      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
-    }
-
-    nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 40px;
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .nav-logo img {
-      height: 44px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--slate);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--navy);
-    }
-
-    .nav-contact {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--navy);
-      text-decoration: none;
-      padding: 10px 20px;
-      border: 1px solid var(--navy);
-      border-radius: 4px;
-      letter-spacing: 0.02em;
-      transition: all 0.2s ease;
-    }
-
-    .nav-contact:hover {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 96px 40px 72px;
-      background: linear-gradient(180deg, var(--ivory) 0%, var(--white) 100%);
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-dark), transparent);
-    }
-
-    .hero-logo {
-      width: min(480px, 85vw);
-      margin: 24px 0 20px;
-    }
-
-    .hero-logo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .hero h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      color: var(--navy);
-      max-width: 700px;
-      line-height: 1.35;
-      margin-top: 0;
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-tagline {
-      font-size: 1.125rem;
-      color: var(--steel);
-      max-width: 600px;
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    /* Main Content */
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    /* Sections */
-    section {
-      padding: 100px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    section:last-of-type {
-      border-bottom: none;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.75rem, 3vw, 2.25rem);
-      font-weight: 500;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-    }
-
-    .section-content {
-      max-width: var(--content-width);
-      margin: 0 auto;
-    }
-
-    .section-content p {
-      font-size: 1.0625rem;
-      color: var(--slate);
-      line-height: 1.85;
-      margin-bottom: 24px;
-    }
-
-    .section-content p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Philosophy Section */
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .philosophy-item {
-      text-align: center;
-    }
-
-    .philosophy-number {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 3rem;
-      font-weight: 400;
-      color: var(--gold-light);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .philosophy-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 12px;
-      letter-spacing: 0.02em;
-    }
-
-    .philosophy-desc {
-      font-size: 0.9375rem;
-      color: var(--steel);
-      line-height: 1.7;
-    }
-
-    /* Investment Criteria */
-    .criteria-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 48px;
-    }
-
-    .criteria-card {
-      background: var(--ivory);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 32px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .criteria-card:hover {
-      border-color: var(--border-dark);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    }
-
-    .criteria-card h3 {
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--navy);
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--gold-light);
-    }
-
-    .criteria-card ul {
-      list-style: none;
-    }
-
-    .criteria-card li {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .criteria-card li:last-child {
-      border-bottom: none;
-    }
-
-    .criteria-card li strong {
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    /* Experience Section */
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    .experience-item {
-      text-align: center;
-      padding: 24px 16px;
-      background: var(--ivory);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.9375rem;
-      font-weight: 500;
-      color: var(--slate);
-      transition: border-color 0.2s ease;
-    }
-
-    .experience-item:hover {
-      border-color: var(--gold-light);
-    }
-
-    /* Distinction Section */
-    .distinction {
-      background: var(--navy);
-      margin: 0 -40px;
-      padding: 100px 40px;
-      border-bottom: none;
-    }
-
-    .distinction .section-label {
-      color: var(--gold-light);
-    }
-
-    .distinction .section-title {
-      color: var(--white);
-    }
-
-    .distinction .section-content p {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .distinction-highlight {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem;
-      font-style: italic;
-      color: var(--white);
-      text-align: center;
-      max-width: 700px;
-      margin: 40px auto 0;
-      line-height: 1.6;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      text-align: center;
-      padding: 120px 0;
-      background: linear-gradient(180deg, var(--white) 0%, var(--ivory) 100%);
-    }
-
-    .cta-section .section-title {
-      margin-bottom: 24px;
-    }
-
-    .cta-text {
-      font-size: 1.0625rem;
-      color: var(--slate);
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.8;
-    }
-
-    .cta-button {
-      display: inline-block;
-      font-size: 0.9375rem;
-      font-weight: 500;
-      color: var(--white);
-      background: var(--navy);
-      text-decoration: none;
-      padding: 16px 40px;
-      border-radius: 4px;
-      letter-spacing: 0.03em;
-      transition: all 0.2s ease;
-    }
-
-    .cta-button:hover {
-      background: var(--slate);
-      transform: translateY(-1px);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--navy);
-      color: rgba(255, 255, 255, 0.6);
-      padding: 60px 40px;
-    }
-
-    .footer-content {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-logo {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.25rem;
-      color: var(--white);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .footer-links a {
-      font-size: 0.875rem;
-      color: rgba(255, 255, 255, 0.6);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover {
-      color: var(--white);
-    }
-
-    .footer-copyright {
-      font-size: 0.8125rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .philosophy-grid,
-      .criteria-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .experience-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 0 24px;
-        height: 64px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding: 100px 24px 60px;
-        min-height: auto;
-      }
-
-      .hero-logo {
-        width: 90vw;
-        margin-bottom: 32px;
-      }
-
-      .scroll-indicator {
-        display: none;
-      }
-
-      main {
-        padding: 0 24px;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .distinction {
-        margin: 0 -24px;
-        padding: 60px 24px;
-      }
-
-      .experience-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-content {
-        flex-direction: column;
-        gap: 24px;
-        text-align: center;
-      }
-
-      .cta-section {
-        padding: 80px 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .experience-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <header id="header">
-    <nav>
-      <a href="#" class="nav-logo">
-        <img src="logo.png" alt="Hazel Lake Partners">
-      </a>
-      <ul class="nav-links">
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#criteria">Investment Criteria</a></li>
-        <li><a href="#distinction">Our Distinction</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-      <a href="#contact" class="nav-contact">Contact Us</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-logo">
-      <img src="logo.png" alt="Hazel Lake Partners">
-    </div>
-    <h1>Investing to Build and Operate Great Businesses</h1>
-    <p class="hero-tagline">
-      A disciplined approach grounded in sound judgment, thoughtful leadership, and long-term partnership.
-    </p>
-  </section>
-
-  <main>
-    <section id="approach">
-      <div class="section-header">
-        <span class="section-label">Our Approach</span>
-        <h2 class="section-title">Thoughtful Transitions, Lasting Success</h2>
-      </div>
-      <div class="section-content">
-        <p>
-          Hazel Lake Partners works closely with business owners to design flexible and thoughtful transitions. We recognize that no two situations are the same and prioritize continuity, stability, and long-term success.
-        </p>
-        <p>
-          Our goal is to ensure the business not only transitions smoothly, but thrives in its next stage. We take a hands-on approach to ownership, investing in people and operations to build enduring value.
-        </p>
-      </div>
-
-      <div class="philosophy-grid" style="margin-top: 64px;">
-        <div class="philosophy-item">
-          <div class="philosophy-number">01</div>
-          <h3 class="philosophy-title">Sound Judgment</h3>
-          <p class="philosophy-desc">Disciplined analysis and careful evaluation guide every decision we make.</p>
-        </div>
-        <div class="philosophy-item">
-          <div class="philosophy-number">02</div>
-          <h3 class="philosophy-title">Clear Leadership</h3>
-          <p class="philosophy-desc">Active, engaged ownership that provides direction while empowering teams.</p>
-        </div>
-        <div class="philosophy-item">
-          <div class="philosophy-number">03</div>
-          <h3 class="philosophy-title">Long-Term Focus</h3>
-          <p class="philosophy-desc">Building sustainable businesses, not pursuing short-term exits.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="criteria">
-      <div class="section-header">
-        <span class="section-label">Investment Profile</span>
-        <h2 class="section-title">What We Look For</h2>
-      </div>
-      <div class="section-content">
-        <p>
-          Hazel Lake Partners focuses on well-run businesses in fragmented industries with durable tailwinds. We look for companies with strong fundamentals, meaningful customer relationships, and opportunities for long-term growth under active ownership.
-        </p>
-    </section>
-
-         <section class="distinction" id="distinction">
-      <div class="section-header">
-        <span class="section-label">Our Distinction</span>
-        <h2 class="section-title">Not a Private Equity Firm</h2>
-      </div>
-      <div class="section-content">
-        <p>
-          Hazel Lake Partners is focused on acquiring and operating a single business. We take a hands-on approach to leadership and ownership rather than pursuing multiple transactions or short-term exits.
-        </p>
-        <p>
-          The name reflects a belief in thoughtful leadership. <em>Hazel</em> is a color shaped by perspective, not a fixed definition. A <em>lake</em> offers no marked road and requires choosing a course with intention.
-        </p>
-      </div>
-      <p class="distinction-highlight">
-        "We seek to honor what business owners have built while positioning their companies for continued growth and success."
-      </p>
-    </section>
-
-    <section id="experience">
-      <div class="section-header">
-        <span class="section-label">Track Record</span>
-        <h2 class="section-title">Operating & Investment Experience</h2>
-      </div>
-      <div class="section-content">
-        <p>
-          Hazel Lake Partners brings experience across operating, investing, and building businesses. Our team has been involved in companies across multiple sectors and stages of growth.
-        </p>
-      </div>
-    </section>
-
-    <section class="cta-section" id="contact">
-      <span class="section-label">For Business Owners</span>
-      <h2 class="section-title">Start a Conversation</h2>
-      <p class="cta-text">
-        If you own a business and are considering a sale to a team that will run the company, invest in its people, and work hard to honor what you have built, we would welcome a conversation. All discussions are confidential.
-      </p>
-      <a href="mailto:hello@hazellakepartners.com" class="cta-button">Contact Us</a>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">Hazel Lake Partners</div>
-      <ul class="footer-links">
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#criteria">Investment Criteria</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="mailto:hello@hazellakepartners.com">Contact</a></li>
-      </ul>
-      <div class="footer-copyright">&copy; 2025 Hazel Lake Partners. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <script>
-    // Header scroll effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const headerOffset = 80;
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
-</body>
-</html>
