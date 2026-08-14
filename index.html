@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hazel Lake Partners | Private Investment Firm</title>
-  <meta name="description" content="Hazel Lake Partners invests to build and operate great businesses. A disciplined approach to acquiring and growing enduring companies.">
+  <meta name="description" content="Hazel Lake Partners is focused on acquiring, operating, and building one great business in the Midwest for the long term.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -120,7 +121,7 @@
       color: var(--white);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       min-height: auto;
       display: flex;
@@ -158,7 +159,7 @@
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 400;
       color: var(--navy);
-      max-width: 700px;
+      max-width: 750px;
       line-height: 1.35;
       margin-top: 0;
       margin-bottom: 16px;
@@ -168,19 +169,18 @@
     .hero-tagline {
       font-size: 1.125rem;
       color: var(--steel);
-      max-width: 600px;
+      max-width: 650px;
       font-weight: 300;
       line-height: 1.8;
     }
 
-    /* Main Content */
+    /* Main */
     main {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    /* Sections */
     section {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -229,7 +229,7 @@
       margin-bottom: 0;
     }
 
-    /* Philosophy Section */
+    /* Philosophy Grid */
     .philosophy-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -317,31 +317,7 @@
       font-weight: 600;
     }
 
-    /* Experience Section */
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    .experience-item {
-      text-align: center;
-      padding: 24px 16px;
-      background: var(--ivory);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.9375rem;
-      font-weight: 500;
-      color: var(--slate);
-      transition: border-color 0.2s ease;
-    }
-
-    .experience-item:hover {
-      border-color: var(--gold-light);
-    }
-
-    /* Distinction Section */
+    /* Ownership Philosophy */
     .distinction {
       background: var(--navy);
       margin: 0 -40px;
@@ -367,12 +343,28 @@
       font-style: italic;
       color: var(--white);
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       margin: 40px auto 0;
       line-height: 1.6;
     }
 
-    /* CTA Section */
+    /* Name Section */
+    .name-section {
+      text-align: center;
+    }
+
+    .name-section .section-content {
+      max-width: 700px;
+    }
+
+    .name-section .section-content p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      line-height: 1.75;
+      color: var(--slate);
+    }
+
+    /* CTA */
     .cta-section {
       text-align: center;
       padding: 120px 0;
@@ -386,7 +378,7 @@
     .cta-text {
       font-size: 1.0625rem;
       color: var(--slate);
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 40px;
       line-height: 1.8;
     }
@@ -460,10 +452,6 @@
         grid-template-columns: 1fr;
         gap: 32px;
       }
-
-      .experience-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
 
     @media (max-width: 768px) {
@@ -486,10 +474,6 @@
         margin-bottom: 32px;
       }
 
-      .scroll-indicator {
-        display: none;
-      }
-
       main {
         padding: 0 24px;
       }
@@ -503,161 +487,337 @@
         padding: 60px 24px;
       }
 
-      .experience-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .footer-content {
         flex-direction: column;
         gap: 24px;
         text-align: center;
       }
 
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
       .cta-section {
         padding: 80px 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .experience-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 
 <body>
+
   <header id="header">
     <nav>
+
       <a href="#" class="nav-logo">
         <img src="logo.png" alt="Hazel Lake Partners">
       </a>
+
       <ul class="nav-links">
         <li><a href="#approach">Approach</a></li>
         <li><a href="#criteria">Investment Criteria</a></li>
-        <li><a href="#distinction">Our Distinction</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#philosophy">Our Philosophy</a></li>
+        <li><a href="#name">Hazel Lake</a></li>
       </ul>
+
       <a href="#contact" class="nav-contact">Contact Us</a>
+
     </nav>
   </header>
 
+
+  <!-- HERO -->
+
   <section class="hero">
+
     <div class="hero-logo">
       <img src="logo.png" alt="Hazel Lake Partners">
     </div>
-    <h1>Investing to Build and Operate Great Businesses</h1>
+
+    <h1>Investing to Build and Operate One Great Business</h1>
+
     <p class="hero-tagline">
-      A disciplined approach grounded in sound judgment, thoughtful leadership, and long-term partnership.
+      Focused on acquiring, operating, and growing a single business in the Midwest for the long term.
     </p>
+
   </section>
 
+
   <main>
+
+
+    <!-- APPROACH -->
+
     <section id="approach">
+
       <div class="section-header">
         <span class="section-label">Our Approach</span>
-        <h2 class="section-title">Thoughtful Transitions, Lasting Success</h2>
-      </div>
-      <div class="section-content">
-        <p>
-          Hazel Lake Partners works closely with business owners to design flexible and thoughtful transitions. We recognize that no two situations are the same and prioritize continuity, stability, and long-term success.
-        </p>
-        <p>
-          Our goal is to ensure the business not only transitions smoothly, but thrives in its next stage. We take a hands-on approach to ownership, investing in people and operations to build enduring value.
-        </p>
+        <h2 class="section-title">One Business. Long-Term Ownership.</h2>
       </div>
 
+      <div class="section-content">
+
+        <p>
+          Hazel Lake Partners was founded with a single goal: to acquire, operate, and build one great business in the Midwest for the long term.
+        </p>
+
+        <p>
+          We work closely with owners to develop a flexible transition that reflects their goals and preserves what makes their company special. Our objective is to carry forward what has been built while investing in the people, operations, and opportunities that will define its next chapter.
+        </p>
+
+      </div>
+
+
+      <div class="philosophy-grid" style="margin-top: 64px;">
+
+        <div class="philosophy-item">
+          <div class="philosophy-number">01</div>
+          <h3 class="philosophy-title">Flexible Transition</h3>
+          <p class="philosophy-desc">
+            Working with owners to structure a transition around their goals and the needs of the business.
+          </p>
+        </div>
+
+
+        <div class="philosophy-item">
+          <div class="philosophy-number">02</div>
+          <h3 class="philosophy-title">Stewardship</h3>
+          <p class="philosophy-desc">
+            Respecting what has been built while investing thoughtfully in the company's continued success.
+          </p>
+        </div>
+
+
+        <div class="philosophy-item">
+          <div class="philosophy-number">03</div>
+          <h3 class="philosophy-title">Long-Term Ownership</h3>
+          <p class="philosophy-desc">
+            Building for the long term, without a predetermined investment horizon or exit.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INVESTMENT CRITERIA -->
+
     <section id="criteria">
+
       <div class="section-header">
         <span class="section-label">Investment Profile</span>
         <h2 class="section-title">What We Look For</h2>
       </div>
+
+
       <div class="section-content">
+
         <p>
-          Hazel Lake Partners focuses on well-run businesses in fragmented industries with durable tailwinds. We look for companies with strong fundamentals, meaningful customer relationships, and opportunities for long-term growth under active ownership.
+          Hazel Lake Partners focuses on established, profitable businesses in fragmented industries with durable demand and attractive long-term fundamentals. We are particularly drawn to essential products and services, recurring customer needs, and businesses that benefit from strong local or regional market positions.
         </p>
+
+      </div>
+
+
+      <div class="criteria-grid">
+
+
+        <div class="criteria-card">
+
+          <h3>Target Industries</h3>
+
+          <ul>
+            <li>Essential &amp; Field Services</li>
+            <li>Logistics &amp; Transportation</li>
+            <li>Healthcare Services</li>
+            <li>Distribution &amp; Wholesaling</li>
+            <li>Light Manufacturing &amp; Fabrication</li>
+            <li>Agriculture &amp; Ag-Tech</li>
+          </ul>
+
+        </div>
+
+
+        <div class="criteria-card">
+
+          <h3>Financial Profile</h3>
+
+          <ul>
+            <li>Revenue greater than <strong>$5 million</strong></li>
+            <li>A history of profitability</li>
+            <li>Net profits in excess of <strong>$500,000</strong></li>
+          </ul>
+
+        </div>
+
+
+        <div class="criteria-card">
+
+          <h3>Geographic Focus</h3>
+
+          <ul>
+            <li>Kansas</li>
+            <li>Missouri</li>
+            <li>Nebraska</li>
+            <li>Iowa</li>
+            <li>Arkansas</li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
     </section>
 
-         <section class="distinction" id="distinction">
+
+    <!-- OWNERSHIP PHILOSOPHY -->
+
+    <section class="distinction" id="philosophy">
+
       <div class="section-header">
-        <span class="section-label">Our Distinction</span>
-        <h2 class="section-title">Not a Private Equity Firm</h2>
+        <span class="section-label">Our Philosophy</span>
+        <h2 class="section-title">Built for the Long Term</h2>
       </div>
+
+
       <div class="section-content">
+
         <p>
-          Hazel Lake Partners is focused on acquiring and operating a single business. We take a hands-on approach to leadership and ownership rather than pursuing multiple transactions or short-term exits.
+          Hazel Lake Partners is focused on acquiring and operating a single business, not building a portfolio of companies. We approach ownership with a long-term perspective and no predetermined investment horizon.
         </p>
+
         <p>
-          The name reflects a belief in thoughtful leadership. <em>Hazel</em> is a color shaped by perspective, not a fixed definition. A <em>lake</em> offers no marked road and requires choosing a course with intention.
+          We believe a great business should create lasting value for its employees, customers, partners, and community. Our goal is to preserve the strengths that made the company successful while investing thoughtfully in its continued growth.
         </p>
+
       </div>
+
+
       <p class="distinction-highlight">
-        "We seek to honor what business owners have built while positioning their companies for continued growth and success."
+        "Our goal is to honor what an owner has built and carry that legacy forward."
       </p>
+
     </section>
 
-    <section id="experience">
+
+    <!-- THE NAME -->
+
+    <section class="name-section" id="name">
+
       <div class="section-header">
-        <span class="section-label">Track Record</span>
-        <h2 class="section-title">Operating & Investment Experience</h2>
+        <span class="section-label">The Name</span>
+        <h2 class="section-title">Hazel Lake</h2>
       </div>
+
+
       <div class="section-content">
+
         <p>
-          Hazel Lake Partners brings experience across operating, investing, and building businesses. Our team has been involved in companies across multiple sectors and stages of growth.
+          <em>Hazel</em> is a color without a single definition. A <em>lake</em> offers no marked road, requiring you to chart your own course. Together, the name reflects the judgment, perspective, and conviction required to choose a path and see it through.
         </p>
+
       </div>
+
     </section>
+
+
+    <!-- CONTACT -->
 
     <section class="cta-section" id="contact">
+
       <span class="section-label">For Business Owners</span>
+
       <h2 class="section-title">Start a Conversation</h2>
+
       <p class="cta-text">
-        If you own a business and are considering a sale to a team that will run the company, invest in its people, and work hard to honor what you have built, we would welcome a conversation. All discussions are confidential.
+        If you own a business and are considering a transition, we would welcome a confidential conversation to learn about your company, your goals, and what matters most to you in choosing its next owner.
       </p>
-      <a href="mailto:hello@hazellakepartners.com" class="cta-button">Contact Us</a>
+
+      <a href="mailto:hello@hazellakepartners.com" class="cta-button">
+        Contact Us
+      </a>
+
     </section>
+
+
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer>
+
     <div class="footer-content">
-      <div class="footer-logo">Hazel Lake Partners</div>
+
+      <div class="footer-logo">
+        Hazel Lake Partners
+      </div>
+
+
       <ul class="footer-links">
         <li><a href="#approach">Approach</a></li>
         <li><a href="#criteria">Investment Criteria</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#philosophy">Our Philosophy</a></li>
         <li><a href="mailto:hello@hazellakepartners.com">Contact</a></li>
       </ul>
-      <div class="footer-copyright">&copy; 2026 Hazel Lake Partners. All rights reserved.</div>
+
+
+      <div class="footer-copyright">
+        &copy; 2026 Hazel Lake Partners. All rights reserved.
+      </div>
+
     </div>
+
   </footer>
 
+
   <script>
+
     // Header scroll effect
     const header = document.getElementById('header');
+
     window.addEventListener('scroll', () => {
+
       if (window.scrollY > 50) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
+
     });
 
-    // Smooth scroll for anchor links
+
+    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
       anchor.addEventListener('click', function (e) {
+
         e.preventDefault();
+
         const target = document.querySelector(this.getAttribute('href'));
+
         if (target) {
+
           const headerOffset = 80;
           const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
           });
+
         }
+
       });
+
     });
+
   </script>
+
 </body>
 </html>
