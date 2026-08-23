@@ -3,26 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Hazel Lake Partners | Private Investment Firm</title>
-  <meta name="description" content="Hazel Lake Partners is focused on acquiring, operating, and building one great business in the Midwest for the long term.">
+
+  <meta
+    name="description"
+    content="Hazel Lake Partners is focused on acquiring, operating, and building one great business in the Midwest for the long term."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
-      --navy: #1a2332;
-      --slate: #374151;
-      --steel: #64748b;
-      --silver: #94a3b8;
-      --pearl: #f1f5f9;
-      --ivory: #fafbfc;
-      --white: #ffffff;
-      --gold: #b8956b;
-      --gold-light: #d4b896;
-      --border: rgba(26, 35, 50, 0.08);
-      --border-dark: rgba(26, 35, 50, 0.12);
+      /* Hazel Lake Partners Brand Colors */
+      --navy: #0B2942;
+      --ivory: #F5F2EA;
+      --olive: #7B8065;
+      --charcoal: #333333;
+      --white: #FFFFFF;
+
+      /* Supporting Values */
+      --text-muted: rgba(51, 51, 51, 0.72);
+      --text-light: rgba(245, 242, 234, 0.82);
+
+      --border: rgba(11, 41, 66, 0.10);
+      --border-dark: rgba(11, 41, 66, 0.16);
+
       --max-width: 1200px;
       --content-width: 800px;
     }
@@ -40,7 +52,7 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--white);
-      color: var(--slate);
+      color: var(--charcoal);
       line-height: 1.7;
       font-size: 16px;
       font-weight: 400;
@@ -53,7 +65,7 @@
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(255, 255, 255, 0.97);
+      background: rgba(245, 242, 234, 0.97);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       z-index: 1000;
@@ -61,7 +73,7 @@
     }
 
     header.scrolled {
-      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 1px 20px rgba(11, 41, 66, 0.08);
     }
 
     nav {
@@ -94,7 +106,7 @@
     .nav-links a {
       font-size: 0.875rem;
       font-weight: 500;
-      color: var(--slate);
+      color: var(--charcoal);
       text-decoration: none;
       letter-spacing: 0.02em;
       transition: color 0.2s ease;
@@ -118,7 +130,7 @@
 
     .nav-contact:hover {
       background: var(--navy);
-      color: var(--white);
+      color: var(--ivory);
     }
 
     /* Hero */
@@ -129,7 +141,11 @@
       align-items: center;
       text-align: center;
       padding: 96px 40px 72px;
-      background: linear-gradient(180deg, var(--ivory) 0%, var(--white) 100%);
+      background: linear-gradient(
+        180deg,
+        var(--ivory) 0%,
+        var(--white) 100%
+      );
       position: relative;
     }
 
@@ -140,7 +156,12 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-dark), transparent);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--border-dark),
+        transparent
+      );
     }
 
     .hero-logo {
@@ -168,7 +189,7 @@
 
     .hero-tagline {
       font-size: 1.125rem;
-      color: var(--steel);
+      color: var(--text-muted);
       max-width: 650px;
       font-weight: 300;
       line-height: 1.8;
@@ -200,7 +221,7 @@
       font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--olive);
       margin-bottom: 16px;
       display: block;
     }
@@ -220,7 +241,7 @@
 
     .section-content p {
       font-size: 1.0625rem;
-      color: var(--slate);
+      color: var(--charcoal);
       line-height: 1.85;
       margin-bottom: 24px;
     }
@@ -246,7 +267,7 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 3rem;
       font-weight: 400;
-      color: var(--gold-light);
+      color: var(--olive);
       line-height: 1;
       margin-bottom: 16px;
     }
@@ -261,7 +282,7 @@
 
     .philosophy-desc {
       font-size: 0.9375rem;
-      color: var(--steel);
+      color: var(--text-muted);
       line-height: 1.7;
     }
 
@@ -283,7 +304,7 @@
 
     .criteria-card:hover {
       border-color: var(--border-dark);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 4px 20px rgba(11, 41, 66, 0.06);
     }
 
     .criteria-card h3 {
@@ -294,7 +315,7 @@
       color: var(--navy);
       margin-bottom: 20px;
       padding-bottom: 16px;
-      border-bottom: 2px solid var(--gold-light);
+      border-bottom: 2px solid var(--olive);
     }
 
     .criteria-card ul {
@@ -303,7 +324,7 @@
 
     .criteria-card li {
       font-size: 0.9375rem;
-      color: var(--slate);
+      color: var(--charcoal);
       padding: 8px 0;
       border-bottom: 1px solid var(--border);
     }
@@ -326,22 +347,22 @@
     }
 
     .distinction .section-label {
-      color: var(--gold-light);
+      color: var(--olive);
     }
 
     .distinction .section-title {
-      color: var(--white);
+      color: var(--ivory);
     }
 
     .distinction .section-content p {
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--text-light);
     }
 
     .distinction-highlight {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.5rem;
       font-style: italic;
-      color: var(--white);
+      color: var(--ivory);
       text-align: center;
       max-width: 760px;
       margin: 40px auto 0;
@@ -361,14 +382,18 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.4rem;
       line-height: 1.75;
-      color: var(--slate);
+      color: var(--charcoal);
     }
 
     /* CTA */
     .cta-section {
       text-align: center;
       padding: 120px 0;
-      background: linear-gradient(180deg, var(--white) 0%, var(--ivory) 100%);
+      background: linear-gradient(
+        180deg,
+        var(--white) 0%,
+        var(--ivory) 100%
+      );
     }
 
     .cta-section .section-title {
@@ -377,7 +402,7 @@
 
     .cta-text {
       font-size: 1.0625rem;
-      color: var(--slate);
+      color: var(--charcoal);
       max-width: 650px;
       margin: 0 auto 40px;
       line-height: 1.8;
@@ -387,7 +412,7 @@
       display: inline-block;
       font-size: 0.9375rem;
       font-weight: 500;
-      color: var(--white);
+      color: var(--ivory);
       background: var(--navy);
       text-decoration: none;
       padding: 16px 40px;
@@ -397,14 +422,14 @@
     }
 
     .cta-button:hover {
-      background: var(--slate);
+      background: var(--charcoal);
       transform: translateY(-1px);
     }
 
     /* Footer */
     footer {
       background: var(--navy);
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(245, 242, 234, 0.65);
       padding: 60px 40px;
     }
 
@@ -419,7 +444,7 @@
     .footer-logo {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.25rem;
-      color: var(--white);
+      color: var(--ivory);
       font-weight: 500;
       letter-spacing: 0.02em;
     }
@@ -432,13 +457,13 @@
 
     .footer-links a {
       font-size: 0.875rem;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(245, 242, 234, 0.65);
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
     .footer-links a:hover {
-      color: var(--white);
+      color: var(--ivory);
     }
 
     .footer-copyright {
@@ -579,7 +604,6 @@
           </p>
         </div>
 
-
         <div class="philosophy-item">
           <div class="philosophy-number">02</div>
           <h3 class="philosophy-title">Stewardship</h3>
@@ -587,7 +611,6 @@
             Respecting what has been built while investing thoughtfully in the company's continued success.
           </p>
         </div>
-
 
         <div class="philosophy-item">
           <div class="philosophy-number">03</div>
@@ -611,7 +634,6 @@
         <h2 class="section-title">What We Look For</h2>
       </div>
 
-
       <div class="section-content">
 
         <p>
@@ -620,9 +642,7 @@
 
       </div>
 
-
       <div class="criteria-grid">
-
 
         <div class="criteria-card">
 
@@ -639,7 +659,6 @@
 
         </div>
 
-
         <div class="criteria-card">
 
           <h3>Financial Profile</h3>
@@ -651,7 +670,6 @@
           </ul>
 
         </div>
-
 
         <div class="criteria-card">
 
@@ -667,7 +685,6 @@
 
         </div>
 
-
       </div>
 
     </section>
@@ -682,7 +699,6 @@
         <h2 class="section-title">Built for the Long Term</h2>
       </div>
 
-
       <div class="section-content">
 
         <p>
@@ -694,7 +710,6 @@
         </p>
 
       </div>
-
 
       <p class="distinction-highlight">
         "Our goal is to honor what an owner has built and carry that legacy forward."
@@ -711,7 +726,6 @@
         <span class="section-label">The Name</span>
         <h2 class="section-title">Hazel Lake</h2>
       </div>
-
 
       <div class="section-content">
 
@@ -756,14 +770,12 @@
         Hazel Lake Partners
       </div>
 
-
       <ul class="footer-links">
         <li><a href="#approach">Approach</a></li>
         <li><a href="#criteria">Investment Criteria</a></li>
         <li><a href="#philosophy">Philosophy</a></li>
         <li><a href="mailto:hello@hazellakepartners.com">Contact</a></li>
       </ul>
-
 
       <div class="footer-copyright">
         &copy; 2026 Hazel Lake Partners. All rights reserved.
