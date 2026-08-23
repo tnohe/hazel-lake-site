@@ -29,6 +29,7 @@
       --white: #FFFFFF;
 
       /* Supporting Values */
+      --hero-ivory: #FAF8F3;
       --text-muted: rgba(51, 51, 51, 0.72);
       --text-light: rgba(245, 242, 234, 0.82);
 
@@ -65,15 +66,16 @@
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(245, 242, 234, 0.97);
+      background: rgba(245, 242, 234, 0.98);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11, 41, 66, 0.12);
       z-index: 1000;
       transition: box-shadow 0.3s ease;
     }
 
     header.scrolled {
-      box-shadow: 0 1px 20px rgba(11, 41, 66, 0.08);
+      box-shadow: 0 3px 18px rgba(11, 41, 66, 0.08);
     }
 
     nav {
@@ -95,6 +97,7 @@
     .nav-logo img {
       height: 44px;
       width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -119,9 +122,10 @@
     .nav-contact {
       font-size: 0.875rem;
       font-weight: 500;
-      color: var(--navy);
+      color: var(--ivory);
+      background: var(--navy);
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 11px 21px;
       border: 1px solid var(--navy);
       border-radius: 4px;
       letter-spacing: 0.02em;
@@ -129,8 +133,10 @@
     }
 
     .nav-contact:hover {
-      background: var(--navy);
+      background: var(--charcoal);
+      border-color: var(--charcoal);
       color: var(--ivory);
+      transform: translateY(-1px);
     }
 
     /* Hero */
@@ -143,7 +149,7 @@
       padding: 96px 40px 72px;
       background: linear-gradient(
         180deg,
-        var(--ivory) 0%,
+        var(--hero-ivory) 0%,
         var(--white) 100%
       );
       position: relative;
@@ -489,6 +495,15 @@
         display: none;
       }
 
+      .nav-logo img {
+        height: 38px;
+      }
+
+      .nav-contact {
+        padding: 9px 16px;
+        font-size: 0.8125rem;
+      }
+
       .hero {
         padding: 100px 24px 60px;
         min-height: auto;
@@ -536,7 +551,7 @@
     <nav>
 
       <a href="#" class="nav-logo">
-        <img src="logo.png?v=2" alt="Hazel Lake Partners">
+        <img src="logo.png?v=3" alt="Hazel Lake Partners">
       </a>
 
       <ul class="nav-links">
@@ -557,7 +572,7 @@
   <section class="hero">
 
     <div class="hero-logo">
-      <img src="logo.png?v=2" alt="Hazel Lake Partners">
+      <img src="logo.png?v=3" alt="Hazel Lake Partners">
     </div>
 
     <h1>Investing to Build and Operate One Great Business</h1>
@@ -805,7 +820,17 @@
 
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+
+        if (href === '#') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+          return;
+        }
+
+        const target = document.querySelector(href);
 
         if (target) {
 
